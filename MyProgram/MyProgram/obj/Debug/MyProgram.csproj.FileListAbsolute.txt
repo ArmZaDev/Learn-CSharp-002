@@ -1,0 +1,8 @@
+C:\Users\ArmZaTV\Documents\Learn-CSharp-002\MyProgram\MyProgram\bin\Debug\MyProgram.exe.config
+C:\Users\ArmZaTV\Documents\Learn-CSharp-002\MyProgram\MyProgram\bin\Debug\MyProgram.exe
+C:\Users\ArmZaTV\Documents\Learn-CSharp-002\MyProgram\MyProgram\bin\Debug\MyProgram.pdb
+C:\Users\ArmZaTV\Documents\Learn-CSharp-002\MyProgram\MyProgram\obj\Debug\MyProgram.csproj.AssemblyReference.cache
+C:\Users\ArmZaTV\Documents\Learn-CSharp-002\MyProgram\MyProgram\obj\Debug\MyProgram.csproj.SuggestedBindingRedirects.cache
+C:\Users\ArmZaTV\Documents\Learn-CSharp-002\MyProgram\MyProgram\obj\Debug\MyProgram.csproj.CoreCompileInputs.cache
+C:\Users\ArmZaTV\Documents\Learn-CSharp-002\MyProgram\MyProgram\obj\Debug\MyProgram.exe
+C:\Users\ArmZaTV\Documents\Learn-CSharp-002\MyProgram\MyProgram\obj\Debug\MyProgram.pdb

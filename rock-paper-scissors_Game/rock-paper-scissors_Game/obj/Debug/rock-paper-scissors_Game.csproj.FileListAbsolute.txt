@@ -1,0 +1,8 @@
+C:\Users\ArmZaTV\Documents\Learn-CSharp-002\rock-paper-scissors_Game\rock-paper-scissors_Game\bin\Debug\rock-paper-scissors_Game.exe.config
+C:\Users\ArmZaTV\Documents\Learn-CSharp-002\rock-paper-scissors_Game\rock-paper-scissors_Game\bin\Debug\rock-paper-scissors_Game.exe
+C:\Users\ArmZaTV\Documents\Learn-CSharp-002\rock-paper-scissors_Game\rock-paper-scissors_Game\bin\Debug\rock-paper-scissors_Game.pdb
+C:\Users\ArmZaTV\Documents\Learn-CSharp-002\rock-paper-scissors_Game\rock-paper-scissors_Game\obj\Debug\rock-paper-scissors_Game.csproj.AssemblyReference.cache
+C:\Users\ArmZaTV\Documents\Learn-CSharp-002\rock-paper-scissors_Game\rock-paper-scissors_Game\obj\Debug\rock-paper-scissors_Game.csproj.SuggestedBindingRedirects.cache
+C:\Users\ArmZaTV\Documents\Learn-CSharp-002\rock-paper-scissors_Game\rock-paper-scissors_Game\obj\Debug\rock-paper-scissors_Game.csproj.CoreCompileInputs.cache
+C:\Users\ArmZaTV\Documents\Learn-CSharp-002\rock-paper-scissors_Game\rock-paper-scissors_Game\obj\Debug\rock-paper-scissors_Game.exe
+C:\Users\ArmZaTV\Documents\Learn-CSharp-002\rock-paper-scissors_Game\rock-paper-scissors_Game\obj\Debug\rock-paper-scissors_Game.pdb
