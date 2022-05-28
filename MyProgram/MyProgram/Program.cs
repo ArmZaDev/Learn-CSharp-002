@@ -637,7 +637,7 @@ namespace MyProgram
 
             Console.WriteLine(total);
             Console.ReadKey();  
-            */
+            
 
 
 
@@ -645,10 +645,129 @@ namespace MyProgram
             //params keyword = a mothod parameter that takes a variable number of arguments.
             //                 The parameter type mustb be a single - dimensional array
 
+            //Method Checkout 
             double Total = CheckOut(3.99, 5.75, 15);
 
             Console.WriteLine(Total);
             Console.ReadKey();
+            
+
+
+
+            //exception handling ⚠️
+            //exception = error that occur during excution
+
+            //        try     = try some code that is considered "dangerous"
+            //        catch   = catches and handles exception when they occur
+            //        finally = always executes regardless if exception is caught or not
+
+            double x, y;
+            double resultout;
+
+            try
+            {
+                Console.Write("Enter number 1: ");
+                x = Convert.ToDouble(Console.ReadLine());
+
+                Console.Write("Enter number 2: ");
+                y = Convert.ToDouble(Console.ReadLine());
+
+                resultout = x / y;
+
+                Console.WriteLine("result = {0}", resultout);
+            } 
+            catch (FormatException e)
+            {
+                Console.WriteLine("Enter ONLY numbers PLEASE!");
+            }
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine("You can't divide by zero!");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Something went wrong!");
+            }
+            finally
+            {
+                Console.WriteLine("Thanks for visiting!");
+            }
+            Console.ReadKey();
+            
+
+
+
+            //conditional operator ❓
+            //conditional operator = used in conditional assignment if a condition is true/false
+
+            // (condition) ? x1 : y1
+            double temperature = 20;
+            string message;
+            //-----------------------------
+            message = (temperature >= 15) ? "It's warm outside!" : "It's cold outside!";
+            Console.WriteLine(message); 
+            
+            if (temperature >= 15)
+            {
+                message = "It's warm outside!";
+            }
+            else
+            {
+                message = "It's cold outside!";
+            }
+            Console.WriteLine(message);
+            Console.ReadKey();
+            
+
+
+
+            //string interpolation 💲
+            //string interpolation = allows us to insert variables into a string Literal
+            //                       precede a string Literal with $
+            //                       {} are placeholders
+
+            string firstName = "sushi";
+            string lastName = "raman";
+            int agenum = 21;
+
+            Console.WriteLine($"Hello {firstName} {lastName}.");
+            Console.WriteLine($"You are {agenum, 5} years old.");
+            Console.ReadKey();
+
+            //Console.WriteLine("Hello " + firstName + " " + lastName + ".");
+            //Console.WriteLine("You are " + agenum + " years old.");
+            */
+
+
+
+            //multidimensional arrays ⬜
+            string[] ford = { "Mustang", "F-150", "Explorer" };
+            string[] chevy = { "Corvette", "Camaro", "Silverado" };
+            string[] toyota = { "Corolla", "Camry", "Rav4" };
+
+            string[,] parkinglot = { { "Mustang", "F-150", "Explorer" },
+                                     { "Corvette", "Camaro", "Silverado" },
+                                     { "Corolla", "Camry", "Rav4" } };
+
+            parkinglot[0, 2] = "Fusion";
+            parkinglot[2, 0] = "Tacoma";
+            /*
+            //---------
+            foreach (string car in parkinglot)
+            {
+                Console.WriteLine(car);
+            }
+            //----------
+            */
+            for (int i = 0; i < parkinglot.GetLength(0); i++)
+            {
+                for (int j = 0; j < parkinglot.GetLength(1); j++)
+                {
+                    Console.Write(parkinglot[i, j] + " ");
+                }
+            }
+            Console.ReadKey();
+
         }
 
         //method singHappyBirthday
