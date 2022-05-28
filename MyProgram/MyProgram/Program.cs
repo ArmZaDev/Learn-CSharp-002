@@ -582,6 +582,7 @@ namespace MyProgram
             
             //foreach loop ➰
             //foreach loop = a simpler way to iTerate over an array, but it's less flexible
+            
             string[] car2 = { "BMW", "Mustang", "Corvette" };
 
             foreach (string car in car2)
@@ -598,6 +599,7 @@ namespace MyProgram
             //         benefit = Let's us reuse code w/o waiting in multiple times
 
             //method singHappyBirthday
+            
             string birthdayBoy = "noodle";
             int yearsOld = 21;
             singHappyBirthday(birthdayBoy, yearsOld);
@@ -611,6 +613,7 @@ namespace MyProgram
             //return = returns data back to the place where a method is invoked
 
             //method Multiply
+            
             double Op1, Op2;
             double Result;
 
@@ -632,6 +635,7 @@ namespace MyProgram
             //method overloading = method share same name, but different parameters
             //                     name + parameters = signature
             //                     methods must have a uinque signature
+            
             double total;
 
             total = Multiply(2, 3, 4);
@@ -647,6 +651,7 @@ namespace MyProgram
             //                 The parameter type mustb be a single - dimensional array
 
             //Method Checkout 
+            
             double Total = CheckOut(3.99, 5.75, 15);
 
             Console.WriteLine(Total);
