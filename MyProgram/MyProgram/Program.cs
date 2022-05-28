@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace MyProgram
 {
     internal class Program
     {
         static void Main(string[] args)
-        {    /*    
+        {      
             //output 💬
             Console.Write("Hey!");
             Console.WriteLine("Hello!");
@@ -20,13 +21,13 @@ namespace MyProgram
              * a
              * multiline
              * comment
-            
+            */
             
             Console.WriteLine("Kei\nsuke");
             Console.ReadKey();
-            */
+            
 
-            /*
+            
             //variables ✖️
             int x; //declaration ประกาศตัวแปร
             x = 123; // initialization กำกนดค่าเริ่มต้น
@@ -313,7 +314,7 @@ namespace MyProgram
                 Console.WriteLine(i);
             }
             Console.ReadKey();
-            //
+            */
             for (int i = 10; i > 0; i++)
             {
                 Console.WriteLine(i);
@@ -350,7 +351,7 @@ namespace MyProgram
 
 
             //number guessing game 🔢
-            Random random = new Random();
+            Random randomm = new Random();
             bool playAgain = true;
             int min = 1;
             int max = 100;
@@ -736,7 +737,7 @@ namespace MyProgram
 
             //Console.WriteLine("Hello " + firstName + " " + lastName + ".");
             //Console.WriteLine("You are " + agenum + " years old.");
-            */
+            
 
 
 
@@ -758,7 +759,7 @@ namespace MyProgram
                 Console.WriteLine(car);
             }
             //----------
-            
+            */
             for (int i = 0; i < parkinglot.GetLength(0); i++)
             {
                 for (int j = 0; j < parkinglot.GetLength(1); j++)
@@ -915,6 +916,7 @@ namespace MyProgram
 
             //array of objects 🏬
             //class Car array of objects 
+            /*
             //----------------------------
             Car[] garage = new Car[3];
 
@@ -926,7 +928,8 @@ namespace MyProgram
             garage[1] = car2;
             garage[2] = car3;
             //----------------------------
-            
+            */
+
             Car[] garage = { new Car("Mustang"), new Car("Corvette"), new Car("Lambo") };
         
             foreach (Car car in garage)
@@ -934,13 +937,245 @@ namespace MyProgram
                 Console.WriteLine(car.model);
             }
             Console.ReadKey();
-            */
+            
 
 
 
 
             //objects as arguments 🧳
+            //Car objects as arguments
+
+            Car car1 = new Car("Mustang", "red");
+
+            Car car2 = Copy(car1);
+
+            Console.WriteLine(car1.color + " " + car1.model);
+            Console.ReadKey();
             
+
+
+
+            //method overriding 🙅
+            //method overriding = provides a new version of a method inherited from a parent class
+            //                    inherited method must be: abstract, virtual, or already overriden
+            //                    Used with ToString(), polymorphism
+
+            //class method overriding
+            Dog dog = new Dog();
+            Cat cat = new Cat();
+
+            dog.Speak();
+            cat.Speak();
+
+            Console.ReadKey();
+            
+
+
+
+            //ToString method 💭
+            //ToString method = converts an object to its string representation so that it is suitable for display
+
+            //class Car ToString method
+            Car car = new Car("Chevy", "Corvette", 2022, "blue");
+
+            Console.WriteLine(car.ToString());
+            Console.ReadKey();
+            
+
+
+
+            //polymorphism 🎭
+            //polymorphism = Greek word that meens to "have many forms"
+            //               Objects can be identified by more than one type
+            //               Ex. A Dog is also: Canine, Animal, Organism
+
+            //calss Vehicle polymorphism
+            Car1 car = new Car1();
+            Bicycle1 bicycle = new Bicycle1();
+            Boat1 boat = new Boat1();
+
+            Vehicle3[] vehicles = { car, bicycle, boat };
+
+            foreach (Vehicle3 vehicle in vehicles)
+            {
+                vehicle.Go();
+            }
+
+            Console.ReadKey();
+            
+
+
+
+            //interfaces 🐟
+            //interfaces = defines a "constract" that all the classes inheriting from should follow
+
+            //             An interface declares "what a class should have"
+            //             An inheriting class dedfines "how it should do it"
+            //             Benefit = security + multiple inheritance + "plug-and-play"
+
+            //class interface
+            Rabbit rabbit = new Rabbit();
+            Hawk hawk = new Hawk();
+            Fish fish = new Fish();
+
+            hawk.Hunt();
+            rabbit.Flee();
+            fish.Hunt();
+            fish.Flee();
+            Console.ReadKey();
+            
+
+
+
+            //Lists 📃
+            //List = data structure that represents a list of objects that can be accessed by index.
+            //       Similar to array, but can dynamically increase/decrease in size
+            //       using System.Collections.Generic;
+
+            List<string> food = new List<string>();
+
+            food.Add("fries");
+            food.Add("pizza");
+            food.Add("hamburger");
+            food.Add("hotdog");
+            food.Add("fries");
+
+            //food.Remove("fries");
+            //food.Insert(0, "sushi");
+            //Console.WriteLine(food.Count);
+            //Console.WriteLine(food[0]);
+            //Console.WriteLine(food.IndexOf("pizza"));
+            //Console.WriteLine(food.LastIndexOf("fries"));
+            //Console.WriteLine(food.Contains("pizza"));
+            //food.Sort();
+            //food.Reverse();
+            //food.Clear();
+            //string[] foodArray = food.ToArray();    
+
+            foreach (string item in food) //foodArray
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadKey();
+            
+
+
+
+            //List of objects 🦸‍♂️
+            //class Player List of objects
+
+            List<Player> players = new List<Player>();
+
+            players.Add(new Player("chad"));
+            players.Add(new Player("steve"));
+            players.Add(new Player("gigi"));
+
+            foreach (Player player in players)
+            {
+                Console.WriteLine(player);
+            }
+            Console.ReadKey();
+            
+
+
+
+            //getters & setters 🔒
+            //getters & setters = add security to fields by encapsulation
+            //                    They're accessors found within properties
+
+            // properties = combine aspects of both fields and methods (share name with a field)
+            // get accessor = used to return the property value
+            // get accessor = used to assign a new value
+            // value keyword = defines the value being assigned by the set (parameter)
+
+            //class CarSpeed getters & setters
+
+            CarSpeed car = new CarSpeed(400);
+
+            car.Speed = 1000000000;
+
+            Console.WriteLine(car.Speed);
+            Console.ReadKey();
+            
+
+
+
+
+            //auto implemented properties 🔐
+            //auto implemented properties = shortcut when no additional logic is required in thr property
+            //                              you do not have to define a field for a property,
+            //                              you only have to write get; and/or set; inside the property
+
+            //class CarModel auto implemented properties
+            CarModel car = new CarModel("Parche");
+
+            Console.WriteLine(car.Model);
+            Console.ReadKey();
+            
+
+
+
+            //enums 🪐
+            //enums = special "class" rhat contains a est of named integer constants.
+            //        Use enums when you have values that you know will not change,
+            //        To get integer value from an item, you must explicily convert to an int
+
+            //        name = integer
+
+            //Console.WriteLine(Planets.Mercury + " is planet #" + (int)Planets.Mercury);
+            //Console.WriteLine(Planets.Pluto + " is planet #" + (int)Planets.Pluto);
+
+            string nameP = PlanetRadius.Earth.ToString();
+            int radius = (int)PlanetRadius.Earth;
+            double volume = Volume(PlanetRadius.Earth);
+
+            Console.WriteLine("planet: " + nameP);
+            Console.WriteLine("radius: " + radius + "km");
+            Console.WriteLine("Volume: " + volume + "km^3"); 
+            Console.ReadKey();
+            
+
+
+
+            //generics ⁉️
+            //generics = "not specific to a paricular data type"
+            //            add <T> to: classes, method, field, ect.
+            //            allows for code reusability for different data types
+
+            int[] intArray = { 1, 2, 3 };
+            double[] doubleArray = { 1.0, 2.0, 3.0 };
+            string[] stringArray = { "1", "2", "3" };
+
+            displayElements(intArray);
+            displayElements(doubleArray);
+            displayElements(stringArray);
+            Console.ReadKey();
+            
+
+
+
+            //multithreading 🧶
+            //thread = an execution path of a program
+            //         We can use multiple threads to perform,
+            //         different tasks to our program at the same time.
+            //         using System.Thraeding;
+
+            Thread mainThread = Thread.CurrentThread;
+            mainThread.Name = "main Thread";
+            //Console.WriteLine(mainThread.Name);
+            //Thread thread1 = new Thread(CountDown);
+            //Thread thread2 = new Thread(CountUp);
+
+            Thread thread1 = new Thread(() => CountDown("Timer #1"));
+            Thread thread2 = new Thread(() => CountUp("Timer #2"));
+            thread1.Start();
+            thread2.Start();
+
+            //CountDown();
+            //CountUp();
+
+            Console.WriteLine(mainThread.Name + " is complete!");
+            Console.ReadKey();
 
 
 
@@ -989,77 +1224,301 @@ namespace MyProgram
             }
             return total;
         }
-        //class Human
-        class Human
-        {
-            public string name;
-            public int age;
-
-            /*
-            //constructors
-            public Human(string name, int age)
-            {
-                this.name = name;
-                this.age = age;
-            }
-            */
-
-            public void Eat()
-            {
-                Console.WriteLine(name + " is eating");
-            }
-            public void Sleep()
-            {
-                Console.WriteLine(name + " is sleeping");
-            }
-        }
         /*
-        //class Car
-        class Car
+        //Car objects as arguments
+        public static Car Copy(Car car)
         {
-            string make, model;
-            int year;
-            string color;
-            public Car(string make, string model, int year, string color)
-            {
-                this.make = make;
-                this.model = model;
-                this.year = year;
-                this.color = color;
-            }
-            public void Drive()
-            {
-                Console.WriteLine("You drive the " + make + " " + model);
-            }
+            return new Car(car.model, car.color);
         }
         */
-        //class Car Array of objects
-        class Car
-        {
-            public string model;
 
-            public Car(string model)
-            {
-                this.model = model;
-            }
+        //---------------------------------------------------------- 
+
+        //enums Planet
+        public static double Volume(PlanetRadius radius)
+        {
+            double volume = (4.0 / 3.0) * Math.PI * Math.Pow((int)radius, 3);
+            return volume;
         }
 
-        //class Cars static
-        class Cars
-        {
-            string model;
-            public static int numberOfcar;
+        //------------------------------------------------------------
 
-            public Cars(string modle)
+        //generics 
+        public static void displayElements<Thing>(Thing[] array)
+        {
+            foreach (Thing item in array)
             {
-                this.model = modle;
-                numberOfcar++;
+                Console.WriteLine(item + " ");
             }
-            public static void StartRace()
-            {
-                Console.WriteLine("The race has begun!");
-            }
+            Console.WriteLine();
         }
-        
+        /*
+        public static void displayElements(double[] array)
+        {
+            foreach (double item in array)
+            {
+                Console.WriteLine(item + " ");
+            }
+            Console.WriteLine();
+        }
+        public static void displayElements(string[] array)
+        {
+            foreach (string item in array)
+            {
+                Console.WriteLine(item + " ");
+            }
+            Console.WriteLine();
+        }
+        */
+
+        //----------------------------------------------------------
+
+        //multithreading
+        public static void CountDown(string name)
+        {
+            for (int i = 10; i >= 0; i--)
+            {
+                Console.WriteLine("Timer #1 : " + i + " seconds");
+                Thread.Sleep(1000);
+            }
+            Console.WriteLine("Timer #1 is complete!");
+        }
+        public static void CountUp(string name)
+        {
+            for (int i = 0; i <= 10; i++)
+            {
+                Console.WriteLine("Timer #2 : " + i + " seconds");
+                Thread.Sleep(1000);
+            }
+            Console.WriteLine("Timer #2 is complete!");
+        }
+    }
+
+    //class Human
+    class Human
+    {
+        public string name;
+        public int age;
+
+        /*
+        //constructors
+        public Human(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+        */
+
+        public void Eat()
+        {
+            Console.WriteLine(name + " is eating");
+        }
+        public void Sleep()
+        {
+            Console.WriteLine(name + " is sleeping");
+        }
+    }
+
+    //------------------------------------------------------
+    
+    //class Car
+    class Car
+    {
+        string make, model;
+        int year;
+        string color;
+        public Car(string make, string model, int year, string color)
+        {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+            this.color = color;
+        }
+        public void Drive()
+        {
+            Console.WriteLine("You drive the " + make + " " + model);
+        }
+    }
+    
+    //------------------------------------------------------
+    
+    //class Car Array of objects
+    class Car
+    {
+        public string model;
+
+        public Car(string model)
+        {
+            this.model = model;
+        }
+    }
+    
+    //------------------------------------------------------
+    
+    //class Car  objects as arguments
+    class Car
+    {
+        public string model;
+        public string color;
+
+        public Car(string model, string color)
+        {
+            this.model = model;
+            this.color = color;
+        }
+    }
+    
+    //-----------------------------------------------------
+
+    //class Cars static
+    class Cars
+    {
+        string model;
+        public static int numberOfcar;
+
+        public Cars(string modle)
+        {
+            this.model = modle;
+            numberOfcar++;
+        }
+        public static void StartRace()
+        {
+            Console.WriteLine("The race has begun!");
+        }       
+    }
+
+    //------------------------------------------------------
+    //class method overriding
+    class Animal
+    {
+        public virtual void Speak()  // virtual
+        {
+            Console.WriteLine("The animal goes *brrr*");
+        }
+    }
+    class Dog : Animal
+    {
+        public override void Speak()  // override
+        {
+            Console.WriteLine("The dog goes *woof*");
+        }
+    }
+    class Cat : Animal
+    {
+        public override void Speak()
+        {
+            Console.WriteLine("The cat goes *meow*");
+        }
+    }
+    //--------------------------------------------------------
+
+    //class Car ToString method
+    class Car
+    {
+        string make, model;
+        int year;
+        string color;
+        public Car(string make, string model, int year, string color)
+        {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+            this.color = color;
+        }
+        public override string ToString()
+        {
+            return "This is a " + make + " " + model;
+        }
+    }
+
+    //calss Vehicle polymorphism
+    class Vehicle3
+    {
+        public virtual void Go()
+        {
+            Console.WriteLine("The car is moving");
+        }
+    }
+    class Car1 : Vehicle3
+    {
+        public override void Go()
+        {
+            Console.WriteLine("The car is moving!");
+        }
+    }
+    class Bicycle1 : Vehicle3
+    {
+        public override void Go()
+        {
+            Console.WriteLine("The bicycle is moving!");
+        }
+    }
+    class Boat1 : Vehicle3
+    {
+        public override void Go()
+        {
+            Console.WriteLine("The boat is moving!");
+        }
+    }
+
+    //class interface
+    interface IPrey 
+    {
+        void Flee();
+    }
+    interface IPredetor
+    {
+        void Hunt();
+    }
+    class Rabbit : IPrey
+    {
+        public void Flee()
+        {
+            Console.WriteLine("The rabbit runs away!");
+        }
+    }
+    class Hawk : IPredetor
+    {
+        public void Hunt()
+        {
+            Console.WriteLine("The hawk is runs searching for food!");
+        }
+    }
+    class Fish : IPrey, IPredetor
+    {
+        public void Flee()
+        {
+            Console.WriteLine("The fish swims away!");
+        }
+        public void Hunt()
+        {
+            Console.WriteLine("The fish is searching for smaller fish");
+        }
+    }
+
+    //enums
+    enum Planets
+    {
+        Mercury = 1,
+        Venus = 2,
+        Earth = 3,
+        Mars = 4,
+        Jupiter = 5,
+        Saturn = 6,
+        Uranus = 7,
+        Neptune = 8,
+        Pluto = 9
+    }
+    enum PlanetRadius
+    {
+        Mercury = 2439,
+        Venus = 6051,
+        Earth = 6371,
+        Mars = 3389,
+        Jupiter = 69911,
+        Saturn = 58232,
+        Uranus = 25326,
+        Neptune = 24622,
+        Pluto = 1188
     }
 }
