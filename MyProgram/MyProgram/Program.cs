@@ -809,7 +809,7 @@ namespace MyProgram
             human2.Sleep();
 
             Console.ReadKey();
-            */
+            
 
 
 
@@ -818,16 +818,16 @@ namespace MyProgram
             //constructors = A special method in a class 
             //               Same name as the class name
             //               Can be used to assign arguments to fields when creating an object
-
+            
             Car car1 = new Car("Ford", "Mustang", 2022, "red");
             Car car2 = new Car("Chevy", "Corvette", 2021, "blue");
             
             car1.Drive();
             car2.Drive();
             Console.ReadKey();
+
+
             
-            
-            /*
             //-----------------
             Human human1 = new Human("sashimi", 26);
             Human human2 = new Human("Morty", 16);
@@ -839,9 +839,113 @@ namespace MyProgram
             human2.Sleep();
 
             Console.ReadKey();
-            */
+            
             //-------------------
 
+
+
+
+            //static 🚫
+            //static = modifier to declare a static member, which belongs to the class isself
+            //         rather than to any specific object
+
+            //class cars static
+            Cars carone = new Cars("Mustang");
+            Cars cartwo = new Cars("Corvette");
+
+            Console.WriteLine(Cars.numberOfcar);
+            Cars.StartRace();
+            Console.ReadKey();
+            
+
+
+
+
+            //overloaded constructors 🍕
+            //overloaded constructors = technique to creat multiple contructors,
+            //                          with a different set of parameters.
+            //                          name + parameters = signature
+
+            //class Pizza
+            Pizza pizza = new Pizza("stuffed crust", "red sauce", "mozzarella");
+
+            Console.ReadKey();
+            
+
+
+
+
+            // inheritance 👪
+            // inheritance = 1 or more child class recieving fields, method, etc. from a common parent
+
+            //class Vehicle
+            CarA car = new CarA();
+            Bicycle bicycle = new Bicycle();
+            Boat boat = new Boat();
+
+            Console.WriteLine(car.speed);
+            Console.WriteLine(car.wheels);
+            car.go();
+
+            Console.WriteLine(bicycle.speed);
+            Console.WriteLine(bicycle.wheels);
+            bicycle.go();
+
+            Console.WriteLine(boat.speed);
+            Console.WriteLine(boat.wheels);
+            boat.go();
+
+            Console.ReadKey();
+            
+
+
+
+            //abstract classes 👻
+            //abstract classes = modifier that indicates missing components or incomplete implementation
+
+            //class Vehicle2
+            Car2 car2 = new Car2();
+            Bicycle2 bicycle2 = new Bicycle2();
+            Boat2 boat2 = new Boat2();
+            
+            Console.ReadKey();
+            
+
+
+
+            //array of objects 🏬
+            //class Car array of objects 
+            //----------------------------
+            Car[] garage = new Car[3];
+
+            Car car1 = new Car("Mustang");
+            Car car2 = new Car("Corvette");
+            Car car3 = new Car("Lambo");
+
+            garage[0] = car1;
+            garage[1] = car2;
+            garage[2] = car3;
+            //----------------------------
+            
+            Car[] garage = { new Car("Mustang"), new Car("Corvette"), new Car("Lambo") };
+        
+            foreach (Car car in garage)
+            {
+                Console.WriteLine(car.model);
+            }
+            Console.ReadKey();
+            */
+
+
+
+
+            //objects as arguments 🧳
+            
+
+
+
+
+            //--------------------------------------------------
         }
 
         //method singHappyBirthday
@@ -909,7 +1013,7 @@ namespace MyProgram
                 Console.WriteLine(name + " is sleeping");
             }
         }
-
+        /*
         //class Car
         class Car
         {
@@ -928,5 +1032,34 @@ namespace MyProgram
                 Console.WriteLine("You drive the " + make + " " + model);
             }
         }
+        */
+        //class Car Array of objects
+        class Car
+        {
+            public string model;
+
+            public Car(string model)
+            {
+                this.model = model;
+            }
+        }
+
+        //class Cars static
+        class Cars
+        {
+            string model;
+            public static int numberOfcar;
+
+            public Cars(string modle)
+            {
+                this.model = modle;
+                numberOfcar++;
+            }
+            public static void StartRace()
+            {
+                Console.WriteLine("The race has begun!");
+            }
+        }
+        
     }
 }
