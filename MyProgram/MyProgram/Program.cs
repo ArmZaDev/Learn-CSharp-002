@@ -782,7 +782,7 @@ namespace MyProgram
             Messages.Bye();
 
             Console.ReadKey();
-            
+         
 
 
 
@@ -810,6 +810,37 @@ namespace MyProgram
 
             Console.ReadKey();
             */
+
+
+
+
+            //constructors 👷
+            //constructors = A special method in a class 
+            //               Same name as the class name
+            //               Can be used to assign arguments to fields when creating an object
+
+            Car car1 = new Car("Ford", "Mustang", 2022, "red");
+            Car car2 = new Car("Chevy", "Corvette", 2021, "blue");
+            
+            car1.Drive();
+            car2.Drive();
+            Console.ReadKey();
+            
+            
+            /*
+            //-----------------
+            Human human1 = new Human("sashimi", 26);
+            Human human2 = new Human("Morty", 16);
+
+            human1.Eat();
+            human1.Sleep();
+
+            human2.Eat();
+            human2.Sleep();
+
+            Console.ReadKey();
+            */
+            //-------------------
 
         }
 
@@ -860,6 +891,15 @@ namespace MyProgram
             public string name;
             public int age;
 
+            /*
+            //constructors
+            public Human(string name, int age)
+            {
+                this.name = name;
+                this.age = age;
+            }
+            */
+
             public void Eat()
             {
                 Console.WriteLine(name + " is eating");
@@ -870,5 +910,23 @@ namespace MyProgram
             }
         }
 
+        //class Car
+        class Car
+        {
+            string make, model;
+            int year;
+            string color;
+            public Car(string make, string model, int year, string color)
+            {
+                this.make = make;
+                this.model = model;
+                this.year = year;
+                this.color = color;
+            }
+            public void Drive()
+            {
+                Console.WriteLine("You drive the " + make + " " + model);
+            }
+        }
     }
 }
