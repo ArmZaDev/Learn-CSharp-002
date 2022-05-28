@@ -758,7 +758,7 @@ namespace MyProgram
                 Console.WriteLine(car);
             }
             //----------
-            */
+            
             for (int i = 0; i < parkinglot.GetLength(0); i++)
             {
                 for (int j = 0; j < parkinglot.GetLength(1); j++)
@@ -767,6 +767,49 @@ namespace MyProgram
                 }
             }
             Console.ReadKey();
+            
+
+
+
+
+            //classes 📦
+            //classes = A boudle of related code.
+            //          Can be used as a blueprint to creat objects (OOP)
+
+            //class Messages
+            Messages.Hello();
+            Messages.Waiting();
+            Messages.Bye();
+
+            Console.ReadKey();
+            
+
+
+
+
+            //objects 🧍‍♂️
+            //objects = An instance of a class
+            //          a class can be used as a blueprint to create objects (OOP)
+            //          object can have fields & method (characteristics & actions)
+
+            //class Human
+            Human human1 = new Human();
+            Human human2 = new Human();
+
+            human1.name = "sashimi";
+            human1.age = 24;
+
+            human2.name = "Morty";
+            human2.age = 16;
+
+            human1.Eat();
+            human1.Sleep();
+
+            human2.Eat();
+            human2.Sleep();
+
+            Console.ReadKey();
+            */
 
         }
 
@@ -811,5 +854,21 @@ namespace MyProgram
             }
             return total;
         }
+        //class Human
+        class Human
+        {
+            public string name;
+            public int age;
+
+            public void Eat()
+            {
+                Console.WriteLine(name + " is eating");
+            }
+            public void Sleep()
+            {
+                Console.WriteLine(name + " is sleeping");
+            }
+        }
+
     }
 }
